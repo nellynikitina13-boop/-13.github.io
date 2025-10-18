@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Рекламное агентство FutureAd</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    nav a {
+      margin-left: 20px;
+      font-weight: 600;
+    }
+
+    .banner {
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    section.about,
+    section.services,
+    section.contact-form {
+      max-width: 900px;
+      margin: 40px auto 60px;
+      background: white;
+      padding: 30px 20px;
+      box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+      border-radius: 8px;
+    }
+    section.about h2,
+    section.services h2,
+    section.contact-form h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #003366;
+    }
+    section.about p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: justify;
+      white-space: pre-line;
+    }
+
+    section.services ul.services-list {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    section.services ul.services-list li {
+      margin-bottom: 12px;
+      padding-left: 40px;
+      position: relative;
+    }
+    section.services ul.services-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 10px;
+      color: #007acc;
+      font-weight: bold;
+    }
+    section.services ul.services-list li strong {
+      color: #003366;
+    }
+
+    /* Добавим фото к услугам */
+    .service-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      max-width: 850px;
+    }
+    .service-item img {
+      width: 240px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-right: 25px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    }
+    .service-desc {
+      max-width: 600px;
+    }
+
+    section.contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #003366;
+    }
+    input, textarea, select {
+      margin-bottom: 16px;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+      font-family: inherit;
+    }
+    button {
+      background-color: #007acc;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      padding: 25px 15px;
+      text-align: center;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    footer a {
+      color: #7ecbff;
+    }
+    footer .socials a {
+      margin: 0 8px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>FutureAd</h1>
+  <nav>
+    <a href="#about">О компании</a>
+    <a href="#services">Услуги</a>
+    <a href="#order">Заказать</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+</header>
+
+<div class="banner">
+  Рекламное агентство будущего
+</div>
+
+<section id="about" class="about">
+  <h2>О команде FutureAd</h2>
+  <p>
+    Мы молодая, динамичная компания, ориентированная на создание качественных и эффективных рекламных решений.
+    Мы ценим индивидуальный подход к каждому клиенту, гибкие цены и быструю реализацию проектов.
+    Наша миссия – не просто выполнить задачу, а сделать бизнес клиента заметным и успешным на рынке.  
+    Мы любим рекламу и вкладываем душу в каждый заказ!
+  </p>
+</section>
+
+<section id="services" class="services">
+  <h2>Наши услуги</h2>
+
+  <div class="service-item">
+    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=70" alt="Полиграфия">
+    <div class="service-desc">
+      <strong>Полиграфия:</strong> визитки, буклеты, открытки, проспекты, листовки, флаеры.  
+      Мы поможем вам создать яркие и качественные печатные материалы, которые привлекут внимание клиентов.
+    </div>
+  </div>
+  
+  <div class="service-item">
+    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=70" alt="Наружная реклама">
+    <div class="service-desc">
+      <strong>Наружная реклама:</strong> баннеры, световые вывески.  
+      Разработаем дизайн и поможем разместить яркую рекламу, которая будет работать 24/7.
+    </div>
+  </div>
+
+  <div class="service-item">
+    <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=600&q=70" alt="Сувенирная продукция">
+    <div class="service-desc">
+      <strong>Сувенирная продукция:</strong> кружки, ежедневники, футболки, ручки, флешки, зарядные устройства и многое другое.  
+      Идеальные подарки и промо-сувениры для укрепления имиджа вашей компании.
+    </div>
+  </div>
+
+  <div class="service-item">
+    <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?auto=format&fit=crop&w=600&q=70" alt="Канцелярия">
+    <div class="service-desc">
+      <strong>Производство канцелярии:</strong> тетради, ручки, блокноты, стикеры с логотипом компании.  
+      Практичные и стильные корпоративные материалы для офиса и клиентов.
+    </div>
+  </div>
+  
+  <div class="service-item">
+    <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?auto=format&fit=crop&w=600&q=70" alt="Шопперы">
+    <div class="service-desc">
+      <strong>Производство шопперов:</strong> сумки и пакеты по индивидуальному заказу и оптом.  
+      Уникальные дизайнерские решения, которые подчеркнут ваш стиль.
+    </div>
+  </div>
+
+  <div class="service-item">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=70" alt="SMM">
+    <div class="service-desc">
+      <strong>SMM и оформление соцсетей:</strong> продвижение и оформление страницы в социальных сетях.  
+      Повысим вашу узнаваемость и вовлеченность аудитории онлайн.
+    </div>
+  </div>  
+</section>
+
+<section id="order" class="contact-form">
+  <h2>Заказать услугу или звонок</h2>
+  <form action="#" method="post" onsubmit="alert('Спасибо за заказ! Мы свяжемся с вами в ближайшее время.'); return false;">
+    <label for="name">Ваше имя:</label>
+    <input type="text" id="name" name="name" required placeholder="Введите имя" />
+
+    <label for="phone">Телефон:</label>
+    <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__" pattern="^\+7\s?\(?\d{3}\)?\s?\d{3}-\d{2}-\d{2}$" />
+
+    <label for="service">Выберите услугу:</label>
+    <select id="service" name="service" required>
+      <option value="">-- Выберите --</option>
+      <option>Полиграфия</option>
+      <option>Наружная реклама</option>
+      <option>Сувенирная продукция</option>
+      <option>Производство канцелярии</option>
+      <option>Производство шопперов</option>
+      <option>SMM и оформление соцсетей</option>
+      <option>Заказать звонок</option>
+    </select>
+
+    <label for="details">Дополнительная информация:</label>
+    <textarea id="details" name="details" rows="3" placeholder="Опишите ваши пожелания"></textarea>
+
+    <button type="submit">Отправить заказ</button>
+  </form>
+</section>
+
+<footer id="contacts">
+  <p><strong>Контакты:</strong></p>
+  <p>Г. Пермь, ул. Ленина, д. 10</p>
+  <p>Телефон: <a href="tel:+73422134567">+7 (342) 213-45-67</a></p>
+  <p>E-mail: <a href="mailto:futuread@mail.ru">futuread@mail.ru</a></p>
+  <p class="socials">
+    Следите за нами:
+    <a href="https://vk.com/futuread" target="_blank" rel="noopener noreferrer">VK</a> | 
+    <a href="https://www.facebook.com/futuread" target="_blank" rel="noopener noreferrer">Facebook</a> | 
+    <a href="https://www.instagram.com/futuread" target="_blank" rel="noopener noreferrer">Instagram</a>
+  </p>
+</footer>
+
+</body>
+</html>
